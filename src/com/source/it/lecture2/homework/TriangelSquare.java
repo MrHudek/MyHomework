@@ -8,9 +8,10 @@ public class TriangelSquare {
         double length = 0;
         double square = 0;
 
-        length = Math.sqrt(Math.pow(10 - 1,2) + Math.pow(7 - 1,2)) + Math.sqrt(Math.pow(-3 - 1,2) + Math.pow(4 - 1,2));
-        length = length + Math.sqrt(Math.pow(-3 - 10,2) + Math.pow(4 - 7,2));
-        square = 0.5 * Math.abs((1 + 3) * (7 - 4) - (10 + 3) * (1 - 4));
+        length = Math.sqrt(Math.pow(x2 - x1,2) + Math.pow(y2 - y1,2));
+        length = length + Math.sqrt(Math.pow(x3 - x1,2) + Math.pow(y3 - y1,2));
+        length = length + Math.sqrt(Math.pow(x3 - x2,2) + Math.pow(y3 - y2,2));
+        square = 0.5 * Math.abs((x1 - x3) * (y2 - y3) - (x2 - x3) * (y1 - y3));
 
 
         System.out.println("Length of all sides is " + length);
